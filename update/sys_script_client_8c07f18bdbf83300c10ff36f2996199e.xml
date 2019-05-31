@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>start_date</field>
+        <global>true</global>
+        <messages/>
+        <name>Client_Script - show error msg dates</name>
+        <order/>
+        <script><![CDATA[/*
+	onChange start date
+	onChange end date 
+	ensure both values are less than eachother to ensure they dont work backwords to trick you 
+*/
+
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	
+	// call script include Client_ManageDates
+	var ga = new GlideAjax('Client_ManageDates');
+	
+	// add parameter for function name
+	ga.addParam('sysparm_name', 'isDatePast');
+	ga.addParam('sysparm_startDate', newValue); //g_form.getValue('start_date'));
+	ga.getXML(myCallbackFunc);
+   
+}
+
+function myCallbackFunc(response) {
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+
+      var clearvalue; // Stays Undefined
+
+      if (answer == 'true') {
+			g_form.hideFieldMsg('start_date',true);  
+		  
+    
+      } else {
+		
+		  g_form.showFieldMsg('start_date','Start date must be before or equal to today','error');
+
+      }
+}
+	
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-18 14:19:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8c07f18bdbf83300c10ff36f2996199e</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>Client_Script - show error msg dates</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="v2 TravelReimbursement" source="x_333297_v2_travel">e0229663db287300c10ff36f299619b6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="v2 TravelReimbursement">e0229663db287300c10ff36f299619b6</sys_scope>
+        <sys_update_name>sys_script_client_8c07f18bdbf83300c10ff36f2996199e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-22 17:08:48</sys_updated_on>
+        <table>x_333297_v2_travel_v2_travel_reimbursement</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

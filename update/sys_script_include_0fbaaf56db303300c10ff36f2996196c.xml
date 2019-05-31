@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_333297_v2_travel.Client_ManageDates</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>Client_ManageDates</name>
+        <script><![CDATA[var Client_ManageDates = Class.create();
+Client_ManageDates.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	isDatePast: function(){
+		// Create GlideDateTime objects for the current date and the passed in date
+		
+		var strDate = this.getParameter('sysparm_startDate');
+		
+		var rightnow = new GlideDateTime();
+		var testdate = new GlideDateTime(strDate);
+		/*
+		gs.addErrorMessage(strDate);
+		gs.addErrorMessage(testdate);
+			gs.addErrorMessage(rightnow);
+		gs.addErrorMessage(testdate.before(rightnow));
+		*/
+		// If the testdate is before rightnow, return true, else return false
+		if (testdate.before(rightnow)) {
+			gs.addInfoMessage("Valid start date");
+			return true;
+		}
+		else {
+			//gs.addErrorMessage("Start date must be before or equal to today");
+			return false;
+		}
+	}  /* ,
+	
+		isDateToday: function(strDate){
+		
+		// Create GlideDateTime objects for the current date and the passed in date
+		var rightnow = new GlideDateTime();
+		var testdate = new GlideDateTime(strDate);
+		// Get the date portion of rightnow and testdate (no timestamp)
+		var today = rightnow.getLocalDate();
+		var istoday = testdate.getLocalDate();
+	
+		// Compare today and istoday to see if they are the same day
+		if(today.compareTo(istoday) == 0){
+			return true;
+		}
+		else {
+			return false;
+		}
+	},
+	
+	isStartDateBeforeORequalToEndDate: function(startDate, endDate) {
+		var rightnow = new GlideDateTime();
+		var today = rightnow.getLocalDate();	
+		
+		startDate = new GlideDateTime(startDate);
+		endDate = new GlideDateTime(endDate);
+			
+		// if start date is before or equal to end date or the dates are the same as long as the end date is before today or equal to today
+		if ((startDate.before(endDate) || startDate.compareTo(endDate) == 0) && (endDate.before(today) || endDate.compareTo(today) == 0)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	},
+	
+    type: 'Client_ManageDates'*/
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-16 14:30:58</sys_created_on>
+        <sys_id>0fbaaf56db303300c10ff36f2996196c</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Client_ManageDates</sys_name>
+        <sys_package display_value="v2 TravelReimbursement" source="x_333297_v2_travel">e0229663db287300c10ff36f299619b6</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="v2 TravelReimbursement">e0229663db287300c10ff36f299619b6</sys_scope>
+        <sys_update_name>sys_script_include_0fbaaf56db303300c10ff36f2996196c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-19 13:22:25</sys_updated_on>
+    </sys_script_include>
+</record_update>

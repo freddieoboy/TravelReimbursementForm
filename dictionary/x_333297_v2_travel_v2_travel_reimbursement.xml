@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="v2 Travel Reimbursement" max_length="40" name="x_333297_v2_travel_v2_travel_reimbursement" sizeclass="79" type="collection">
+        <element default="javascript:gs.nowDateTime();" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="End Date" max_length="40" name="end_date" type="glide_date" use_dynamic_default="true"/>
+        <element choice="3" default="Airport" label="Expenses Type" max_length="40" name="expenses_type" type="choice">
+            <choice>
+                <element label="Airport" sequence="0" value="Airport"/>
+                <element label="Cab" sequence="1" value="Cab"/>
+                <element label="Food" sequence="2" value="Food"/>
+                <element label="Hotel" sequence="3" value="Hotel"/>
+                <element label="Toll" sequence="4" value="Toll"/>
+                <element label="Train" sequence="5" value="Train"/>
+                <element label="Other" sequence="99" value="Other"/>
+            </choice>
+        </element>
+        <element label="Location Visited" max_length="40" name="location_visited" type="string"/>
+        <element label="Other Description" max_length="40" name="other_description" type="string"/>
+        <element label="Payment Amount" max_length="20" name="payment_amount" type="price"/>
+        <element choice="3" default="Bitcoin" label="Payment Method" max_length="40" name="payment_method" type="choice">
+            <choice>
+                <element label="Bitcoin" sequence="0" value="Bitcoin"/>
+                <element label="Cash" sequence="1" value="Cash"/>
+                <element label="Check" sequence="2" value="Check"/>
+                <element label="Credit" sequence="3" value="Credit"/>
+                <element label="Pay Card" sequence="4" value="Pay Card"/>
+                <element label="PayPal" sequence="5" value="PayPal"/>
+                <element label="Venmo" sequence="6" value="Venmo"/>
+            </choice>
+        </element>
+        <element label="Reason Visited" max_length="400" name="reason_visited" type="string"/>
+        <element label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <element choice="3" default="Open" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element label="Approved" value="Approved"/>
+                <element label="Canceled" value="Canceled"/>
+                <element label="Closed" value="Closed"/>
+                <element label="Completed" value="Completed"/>
+                <element label="In Progress" value="In Progress"/>
+                <element label="On Hold" value="On Hold"/>
+                <element label="Open" value="Open"/>
+                <element label="Rejected" value="Rejected"/>
+            </choice>
+        </element>
+        <element label="User in Need of Reimbursement" max_length="32" name="user_in_need_of_reimbursement" reference="sys_user" type="reference"/>
+    </element>
+</database>

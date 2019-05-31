@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="v2 Finance" max_length="40" name="x_333297_v2_travel_v2_finance" sizeclass="29" type="collection">
+        <element label="Payment Amount" max_length="20" name="payment_amount" read_only="true" type="price"/>
+        <element label="User in Need of Reimbursement" max_length="32" name="user_in_need_of_reimbursement" read_only="true" reference="sys_user" type="reference"/>
+    </element>
+</database>

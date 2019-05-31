@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <description/>
+        <label_cache>null</label_cache>
+        <latest_snapshot/>
+        <name>test flow</name>
+        <remote_trigger_id/>
+        <show_draft_actions>false</show_draft_actions>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-13 14:32:30</sys_created_on>
+        <sys_id>811fe243db113300c10ff36f29961965</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>test flow</sys_name>
+        <sys_package display_value="v2 TravelReimbursement" source="x_333297_v2_travel">e0229663db287300c10ff36f299619b6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="v2 TravelReimbursement">e0229663db287300c10ff36f299619b6</sys_scope>
+        <sys_update_name>sys_hub_flow_811fe243db113300c10ff36f29961965</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-13 14:32:30</sys_updated_on>
+    </sys_hub_flow>
+</record_update>

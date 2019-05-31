@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_action_instance">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Post Problem Details">afda8f433be0030057a4a2e334efc4bc</action_type>
+        <comment/>
+        <compiled_snapshot display_value="Post Problem Details">afda8f433be0030057a4a2e334efc4bc</compiled_snapshot>
+        <display_text/>
+        <flow display_value="High Priority Problem test">6d5b0c99dbf03300c10ff36f29961997</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-12 19:36:20</sys_created_on>
+        <sys_id>ed5b0c99dbf03300c10ff36f2996199e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="v2 TravelReimbursement" source="x_333297_v2_travel">e0229663db287300c10ff36f299619b6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="v2 TravelReimbursement">e0229663db287300c10ff36f299619b6</sys_scope>
+        <sys_update_name>sys_hub_action_instance_ed5b0c99dbf03300c10ff36f2996199e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-12 19:36:20</sys_updated_on>
+        <ui_id>04f968ee-3017-4639-a319-21ecc7b9a476</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ed5b0c99dbf03300c10ff36f2996199e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ed5b0c99dbf03300c10ff36f2996199e</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-12 19:36:20</sys_created_on>
+        <sys_id>215b0c99dbf03300c10ff36f299619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-12 19:36:20</sys_updated_on>
+        <value>High Priority Problem Created</value>
+        <variable display_value="">3bda8f433be0030057a4a2e334efc4d7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ed5b0c99dbf03300c10ff36f2996199e</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-12 19:36:20</sys_created_on>
+        <sys_id>6d5b0c99dbf03300c10ff36f299619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-12 19:36:20</sys_updated_on>
+        <value>#testinbound</value>
+        <variable display_value="">bfdacf433be0030057a4a2e334efc405</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ed5b0c99dbf03300c10ff36f2996199e</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-12 19:36:20</sys_created_on>
+        <sys_id>a95b0c99dbf03300c10ff36f299619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-12 19:36:20</sys_updated_on>
+        <value>Frankenstein</value>
+        <variable display_value="">7bda8f433be0030057a4a2e334efc4fa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ed5b0c99dbf03300c10ff36f2996199e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-12 19:36:20</sys_created_on>
+        <sys_id>e15b0c99dbf03300c10ff36f299619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-12 19:36:20</sys_updated_on>
+        <value>https://hooks.slack.com/services/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</value>
+        <variable display_value="">e7da8f433be0030057a4a2e334efc4bf</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ed5b0c99dbf03300c10ff36f2996199e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_additional_message</field>
+        <id>ed5b0c99dbf03300c10ff36f2996199e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-12 19:36:20</sys_created_on>
+        <sys_id>a15b0c99dbf03300c10ff36f299619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-12 19:36:20</sys_updated_on>
+        <table>var__m_sys_hub_action_input_afda8f433be0030057a4a2e334efc4bc</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_channel</field>
+        <id>ed5b0c99dbf03300c10ff36f2996199e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-12 19:36:20</sys_created_on>
+        <sys_id>ed5b0c99dbf03300c10ff36f299619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-12 19:36:20</sys_updated_on>
+        <table>var__m_sys_hub_action_input_afda8f433be0030057a4a2e334efc4bc</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_problem</field>
+        <id>ed5b0c99dbf03300c10ff36f2996199e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-12 19:36:20</sys_created_on>
+        <sys_id>655b0c99dbf03300c10ff36f299619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-12 19:36:20</sys_updated_on>
+        <table>var__m_sys_hub_action_input_afda8f433be0030057a4a2e334efc4bc</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_username</field>
+        <id>ed5b0c99dbf03300c10ff36f2996199e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-12 19:36:20</sys_created_on>
+        <sys_id>2d5b0c99dbf03300c10ff36f299619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-12 19:36:20</sys_updated_on>
+        <table>var__m_sys_hub_action_input_afda8f433be0030057a4a2e334efc4bc</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_webhook_url</field>
+        <id>ed5b0c99dbf03300c10ff36f2996199e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-12 19:36:20</sys_created_on>
+        <sys_id>295b0c99dbf03300c10ff36f299619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-12 19:36:20</sys_updated_on>
+        <table>var__m_sys_hub_action_input_afda8f433be0030057a4a2e334efc4bc</table>
+        <value/>
+    </sys_element_mapping>
+</record_update>

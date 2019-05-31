@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <hint/>
+        <name>v2 Travel Reimbursement</name>
+        <order/>
+        <roles>x_333297_v2_travel.v2_travel_reimbursement_user</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-07 19:11:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9ec51623dba87300c10ff36f299619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>v2 Travel Reimbursement</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="v2 TravelReimbursement" source="x_333297_v2_travel">e0229663db287300c10ff36f299619b6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="v2 TravelReimbursement">e0229663db287300c10ff36f299619b6</sys_scope>
+        <sys_update_name>sys_ui_application_9ec51623dba87300c10ff36f299619e3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-07 19:11:51</sys_updated_on>
+    </sys_ui_application>
+</record_update>

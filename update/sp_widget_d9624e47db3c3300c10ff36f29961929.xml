@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>font_widget_test</id>
+        <internal>false</internal>
+        <link/>
+        <name>Font widget test</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-18 14:45:53</sys_created_on>
+        <sys_id>d9624e47db3c3300c10ff36f29961929</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Font widget test</sys_name>
+        <sys_package display_value="v2 TravelReimbursement" source="x_333297_v2_travel">e0229663db287300c10ff36f299619b6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="v2 TravelReimbursement">e0229663db287300c10ff36f299619b6</sys_scope>
+        <sys_update_name>sp_widget_d9624e47db3c3300c10ff36f29961929</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-18 14:50:08</sys_updated_on>
+        <template><![CDATA[<div>
+  <i class='fa fa-flag-0' style=“fontsize:200px;color:orange”></i>
+	<i class='fa fa-bell' style=“fontsize:1800px;color:purple”></i>
+</div>]]></template>
+    </sp_widget>
+</record_update>

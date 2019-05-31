@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_cat_item_guide_items">
+    <sc_cat_item_guide_items action="INSERT_OR_UPDATE">
+        <condition>IO:ececec70dbc13300c10ff36f29961939=true^EQ</condition>
+        <guide display_value="IT Request test demo">9739a8fcdb813300c10ff36f299619a6</guide>
+        <ignore_mandatory_eval>false</ignore_mandatory_eval>
+        <item display_value="Order a Laptop">bbc6ff13dbf03300c10ff36f29961936</item>
+        <order>2</order>
+        <quantity>1</quantity>
+        <requested_by/>
+        <requested_for/>
+        <show_quantity>false</show_quantity>
+        <sys_class_name>sc_cat_item_guide_items</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-23 18:50:52</sys_created_on>
+        <sys_id>b04aa430dbc13300c10ff36f29961950</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>bbc6ff13dbf03300c10ff36f29961936</sys_name>
+        <sys_package display_value="v2 TravelReimbursement" source="x_333297_v2_travel">e0229663db287300c10ff36f299619b6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="v2 TravelReimbursement">e0229663db287300c10ff36f299619b6</sys_scope>
+        <sys_update_name>sc_cat_item_guide_items_b04aa430dbc13300c10ff36f29961950</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-23 19:04:59</sys_updated_on>
+        <use_sc_layout>true</use_sc_layout>
+    </sc_cat_item_guide_items>
+</record_update>

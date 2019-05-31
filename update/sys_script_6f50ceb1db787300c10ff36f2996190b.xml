@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_333297_v2_travel_v2_travel_reimbursement</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_333297_v2_travel_v2_travel_reimbursement">payment_amount&gt;javascript:global.getCurrencyFilter('x_333297_v2_travel_v2_travel_reimbursement','payment_amount', 'USD;500')^ORpayment_amount&lt;=javascript:global.getCurrencyFilter('x_333297_v2_travel_v2_travel_reimbursement','payment_amount', 'USD;0')^EQ<item endquery="false" field="payment_amount" goto="false" newquery="false" operator="&gt;" or="false" value="javascript:global.getCurrencyFilter('x_333297_v2_travel_v2_travel_reimbursement','payment_amount', 'USD;500')"/>
+            <item endquery="false" field="payment_amount" goto="false" newquery="false" operator="&lt;=" or="true" value="javascript:global.getCurrencyFilter('x_333297_v2_travel_v2_travel_reimbursement','payment_amount', 'USD;0')"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>onChange - if payment amount &gt; 500 error</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	/*
+		if you dont change the initial value you cant get the conversion 
+		future update: get the conversion rate first 
+		
+		Notice: when approving, this updates the record therefore this runs if currency rate falls below then it approves 
+			but shows error messages. may want to put some kind of condition on this
+	*/
+	var usConvertedSubmittedPrice = current.payment_amount.getReferenceDisplayValue();
+	var currencyCode = ''; //current.payment_amount.getCurrencyCode();
+	var actualSubmittedPriceinWhateverCurrency = current.payment_amount.getCurrencyDisplayValue();
+	
+	//gs.addErrorMessage(usConvertedSubmittedPrice);
+	//gs.addErrorMessage(actualSubmittedPriceinWhateverCurrency);				   
+	
+	var priceUSD = '';
+	var priceOther = '';
+	
+	var currentChar = '';
+	
+	var i = 0;
+	// removes the dollar sign and comma's inside submitted price string
+	for (i; i < usConvertedSubmittedPrice.length; i++) {
+		currentChar = usConvertedSubmittedPrice.charAt(i);
+		
+		if (!isNaN(currentChar) || currentChar == '.') {
+			priceUSD += currentChar;
+		}
+
+	}
+	// removes the currency sign and commas inside submitted price string
+	// also grabs currency symbol or currency code if no symbol present
+	for (i = 0; i < actualSubmittedPriceinWhateverCurrency.length; i++) {
+		currentChar = actualSubmittedPriceinWhateverCurrency.charAt(i);
+		
+		if (!isNaN(currentChar) || currentChar == '.') {
+			priceOther += currentChar;
+		}
+		// grab currency symbol
+		else if (currentChar != '.' && currentChar != ',' && currentChar != '(' && currentChar != ')'){
+			currencyCode += currentChar + '';
+		}
+	}
+	//gs.addErrorMessage(priceUSD + " ; " + priceOther);
+	
+	// dont allow division by zero
+	if (priceUSD == 0 && priceOther == 0) {
+		gs.addErrorMessage('Payment Amount must be between $0 and $500');
+	}
+	else {
+		conversionRate = priceUSD/priceOther;
+	
+		gs.addErrorMessage('Payment Amount must be between ' + currencyCode + ' 0 and ' + currencyCode + ' ' + (500/conversionRate).toFixed(2));
+	// + '.\nYour entry: ' + actualSubmittedPriceinWhateverCurrency + '\nConverted entry: ' + usConvertedSubmittedPrice + '\nConversion Rate: ' + conversionRate);
+	}
+	current.setAbortAction(true);
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-14 17:26:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6f50ceb1db787300c10ff36f2996190b</sys_id>
+        <sys_mod_count>82</sys_mod_count>
+        <sys_name>onChange - if payment amount &gt; 500 error</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="v2 TravelReimbursement" source="x_333297_v2_travel">e0229663db287300c10ff36f299619b6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="v2 TravelReimbursement">e0229663db287300c10ff36f299619b6</sys_scope>
+        <sys_update_name>sys_script_6f50ceb1db787300c10ff36f2996190b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-20 20:58:37</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=6f50ceb1db787300c10ff36f2996190b"/>
+</record_update>
